@@ -1,0 +1,437 @@
+.home-pase {
+    text-align: center;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.home-pase .box-left-home {
+    float: left;
+    width: 100%;
+}
+
+.home-pase .box-left-home .logo {
+    text-align: left;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.home-pase .box-left-home .logo img {
+    max-width: 100px;
+}
+
+.home-pase .box-left-home .title {
+    text-align: left;
+    margin-left: 100px;
+    font-size: 35px;
+    max-width: 760px;
+    font-weight: bold;
+}
+
+.home-pase .box-left-home .content {
+    text-align: left;
+    margin-left: 100px;
+    margin-top: 35px;
+}
+
+.home-pase .box-left-home .content .name,
+.home-pase .box-left-home .content .phone,
+.home-pase .box-left-home .content .code,
+.home-pase .box-left-home .content .email,
+.home-pase .box-left-home .content .address {
+    display: flex;
+    margin-top: 15px;
+}
+
+.home-pase .box-left-home .content .name .content-name,
+.home-pase .box-left-home .content .phone .content-phone,
+.home-pase .box-left-home .content .code .content-code,
+.home-pase .box-left-home .content .email .content-email,
+.home-pase .box-left-home .content .address .content-address {
+    font-weight: bold;
+    margin-left: 10px;
+    max-width: 760px;
+}
+
+.home-pase .box-left-home .text-information {
+    margin-top: 30px;
+    max-width: 760px;
+    font-size: 17px;
+}
+
+.home-pase .box-left-home .footer-home .action {
+    text-align: right;
+    margin-left: 100px;
+}
+
+.home-pase .box-left-home .footer-home .action .gacha button {
+    margin-right: 30px;
+    background-color: #c209cf;
+    color: #ffffff;
+    border: none;
+    padding: 13.5px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.home-pase .box-left-home .footer-home .action .gacha button:hover {
+    background-color: #800789;
+}
+
+.home-pase .box-left-home .footer-home .action .edit button {
+    background-color: #2e77ff;
+    color: #ffffff;
+    border: none;
+    padding: 13.5px 40px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.home-pase .box-left-home .footer-home .action .edit button:hover {
+    background-color: #255abd;
+}
+
+.home-pase .box-left-home .footer-home .action .logout {
+    margin-left: 30px;
+}
+
+.home-pase .box-left-home .footer-home .action .logout button {
+    background-color: #ff2b2b;
+    color: #ffffff;
+    border: none;
+    padding: 13.5px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.home-pase .box-left-home .footer-home .action .logout button:hover {
+    background-color: #c60808;
+}
+
+.box-right-home {
+    background: #bbb7ff;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.box-right-home .ticket {
+    margin-top: 80px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20px;
+    min-height: 10%;
+    margin-bottom: 17.5vh;
+}
+
+.box-right-home .ticket .bgticket {
+    border-radius: 15px;
+    margin-top: 15px;
+    width: 21vw;
+}
+
+.box-right-home .ticket .text {
+    margin-top: 10px;
+}
+
+.box-right-home .ticket .text .text-ticket {
+    text-align: center;
+}
+
+.box-right-home .ticket .text .text-ticket .text-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.box-right-home .ticket .text .text-ticket .text-address {
+    font-style: italic;
+    font-size: 13px;
+    color: rgb(133, 133, 133);
+}
+
+.box-right-home .ticket .text .text-solid {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 41vh;
+}
+
+.box-right-home .ticket .text .text-body {
+    text-align: left;
+    display: flex;
+}
+
+.box-right-home .ticket .text .text-body .body-left .name,
+.box-right-home .ticket .text .text-body .body-left .date,
+.box-right-home .ticket .text .text-body .body-left .seats {
+    margin-left: 2vh;
+    margin-top: 40px;
+}
+
+.box-right-home .ticket .text .text-body .body-left .name .title-name,
+.box-right-home .ticket .text .text-body .body-left .seats .title-seats,
+.box-right-home .ticket .text .text-body .body-left .date .title-date {
+    margin-left: 8px;
+    text-align: left;
+    font-size: 10px;
+    color: rgb(125, 125, 125);
+}
+
+.box-right-home .ticket .text .text-body .body-left .name .name-name,
+.box-right-home .ticket .text .text-body .body-left .seats .seats-seats,
+.box-right-home .ticket .text .text-body .body-left .date .date-date {
+    font-weight: bold;
+    margin-left: 8px;
+    font-size: 15px;
+    max-width: 140px;
+    min-width: 140px;
+}
+
+.box-right-home .ticket .text .text-body .body-right .time {
+    display: block;
+    padding-left: 40px;
+    padding-top: 10px;
+    margin-top: 29px;
+}
+
+.box-right-home .ticket .text .text-body .body-right .time .title-time {
+    margin-left: 8px;
+    text-align: left;
+    font-size: 10px;
+    color: rgb(125, 125, 125);
+}
+
+.box-right-home .ticket .text .text-body .body-right .time .time-time {
+    font-weight: bold;
+    margin-left: 8px;
+    font-size: 15px;
+}
+
+.box-right-home .ticket .text .text-body .body-right .code {
+    margin-left: 5vh;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.box-right-home .ticket .text .text-body .body-right .code .title-code {
+    margin-left: 8px;
+    text-align: left;
+    font-size: 10px;
+    color: rgb(125, 125, 125);
+}
+
+.box-right-home .ticket .text .text-body .body-right .code .code-code {
+    font-weight: bold;
+    margin-left: 8px;
+    font-size: 15px;
+}
+
+.box-right-home .ticket .text .text-body .body-right .car-number {
+    display: block;
+    padding-left: 40px;
+    padding-top: 30px;
+    margin-top: 11px;
+}
+
+.box-right-home .ticket .text .text-body .body-right .car-number .title-car-number {
+    margin-left: 8px;
+    text-align: left;
+    font-size: 10px;
+    color: rgb(125, 125, 125);
+}
+
+.box-right-home .ticket .text .text-body .body-right .car-number .car-car-number {
+    font-weight: bold;
+    margin-left: 8px;
+    font-size: 15px;
+}
+
+.box-right-home .ticket .text .text-solid-bottom {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px dashed rgba(0, 0, 0, 0.1);
+    max-width: 100vw;
+}
+
+.box-right-home .ticket .text .text-code {
+    margin-top: 20px;
+}
+
+.box-right-home .ticket .text .text-code .custom-barcode {
+    width: 100%;
+
+}
+
+.box-right-home .ticket .text .text-code .custom-barcode text {
+    display: none;
+}
+
+
+.box-right-home .ticket .text .text-bottom {
+    margin-top: 4px;
+    font-size: 13px;
+    color: rgb(125, 125, 125);
+}
+
+.box-right-home .ticket .text .text-solid-footer {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.box-right-home .left {
+    margin-left: -30px;
+    margin-top: -144px;
+    position: relative;
+    max-width: 32px;
+    min-height: 32px;
+    background-color: #bbb7ff;
+    border-radius: 50%;
+    margin-bottom: -30px;
+}
+
+.box-right-home .right {
+    top: -3px;
+    left: 322px;
+    position: relative;
+    max-width: 32px;
+    min-height: 32px;
+    background-color: #bbb7ff;
+    border-radius: 50%;
+}
+
+/* Add this CSS to your stylesheet */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.winner-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+.winner-popup p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.winner-popup button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.winner-popup button:hover {
+    background-color: #45a049;
+}
+
+@media (min-width: 741px) {
+    .box-left-home {
+        max-width: 65%;
+    }
+
+    .box-right-home {
+        max-width: 35%;
+    }
+
+    .home-pase .box-left-home .footer-home .action {
+        display: flex;
+        margin-top: 8%;
+    }
+
+    .home-pase .box-left-home .footer-home {
+        display: flex;
+    }
+
+    .box-right-home .ticket {
+        margin-left: 6vw;
+    }
+}
+
+@media (max-width: 740px) {
+    .home-pase {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-pase .box-left-home .footer-home .action {
+        margin-left: 30%;
+        display: flex;
+        margin-top: 30px;
+    }
+
+    .box-left-home,
+    .box-right-home {
+        width: 100%;
+        min-height: auto;
+        float: none;
+        display: block;
+    }
+
+    .box-left-home {
+        margin-left: -130px;
+    }
+
+    .home-pase .box-left-home .logo img {
+        max-width: 60px;
+    }
+
+    .home-pase .box-left-home .content .text-information span {
+        font-size: 0.9rem;
+    }
+
+    .home-pase .box-left-home .title {
+        font-size: 1.5em;
+    }
+
+    .home-pase .box-left-home .footer-home .information .title-information {
+        font-size: 1.5em;
+    }
+
+    .box-left-home .footer-home .action {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .box-right-home {
+        order: 2;
+        margin-top: 20px;
+        min-height: 100vh;
+    }
+
+    .box-right-home .ticket {
+        margin-left: 12vw;
+        margin-right: 12vw;
+        min-height: 80vh;
+    }
+
+    .box-right-home .ticket .bgticket {
+        width: 100%;
+    }
+
+    .box-right-home .left {
+        top: -1px;
+    }
+
+    .box-right-home .right {
+        left: 307px;
+    }
+}

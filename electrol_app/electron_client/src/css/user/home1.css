@@ -1,0 +1,652 @@
+body,
+html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh !important;
+}
+
+.selected-service {
+    border-left: 4px solid #3498db;
+    /* Example of a blue border on the left */
+    background-color: #ddd;
+    /* Light gray background for the selected item */
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    background: #efefef;
+}
+
+.service-list {
+    flex-grow: 1;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.service {
+    height: 29px;
+    padding: 20px;
+    border-bottom: 1.5px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 25%;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.service:hover,
+.service.selected {
+    background: #ddd;
+}
+
+.service-img {
+    width: 100%;
+}
+
+.service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+.service-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 38px;
+    color: #9a9a9a;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.service-button[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    /* Position the tooltip above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    /* Tooltip background color */
+    color: #fff;
+    /* Tooltip text color */
+    padding: 8px 12px;
+    /* Space inside the tooltip */
+    border-radius: 5%;
+    /* Rounded corners for the tooltip */
+    white-space: nowrap;
+    font-size: 14px;
+    /* Font size of the tooltip text */
+    font-family: Arial, sans-serif;
+    /* Font family for the tooltip text */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    /* Add shadow to the tooltip */
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    /* Prevent the tooltip from blocking mouse events */
+}
+
+.service-button[data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Optional: Add a small arrow below the tooltip box */
+.service-button[data-tooltip]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% - 4px);
+    /* Adjust position of the arrow */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+    /* Arrow color matches tooltip background */
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service-button[data-tooltip]:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.service-button:hover {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.service-button i {
+    transition: color 0.3s;
+}
+
+.chat-container {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.service-webview {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s;
+    overflow: hidden;
+    z-index: 100;
+    /* background: #5e5d5d4e; */
+}
+
+.resize-handle {
+    position: absolute;
+    left: -5px;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    cursor: ew-resize;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 101;
+    /* Ensure the resize handle is on top */
+}
+
+.swal2-title {
+    font-size: 18px !important;
+}
+
+.swal2-container {
+    position: absolute;
+    top: 0;
+    z-index: 200;
+}
+
+.swal2-input {
+    width: 80% !important;
+    font-size: 14px !important;
+    margin-bottom: 10px;
+}
+
+.swal2-file {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.swal2-file-button {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3085d6;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.swal2-file-name {
+    font-size: 14px;
+    color: #555;
+}
+
+.swal2-file-input {
+    display: none;
+}
+
+.delete-icon-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* note sidebar */
+
+
+/* create note sidebar */
+.create-content {
+    padding: 10px;
+}
+
+.create-content-chill {
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    /* padding: 10px; */
+}
+
+.add-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    /* padding: 10px; */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.icon-add {
+    padding: 10px;
+    background-color: #f9f9f9;
+    ;
+}
+
+.add-content-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    box-sizing: border-box;
+    /* border: none; */
+    outline: none;
+}
+
+
+
+/* edit note sidebar */
+.content-edit-input {
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+/*content note*/
+.sidebar-content {
+    padding: 10px;
+}
+
+.note-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.note-title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.note-toggle {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.note-content {
+    padding: 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.completed-notes-container {
+    padding: 10px;
+}
+
+.success-container {
+    margin: auto;
+}
+
+.completed-notes-text {
+    color: #7f7f7f;
+    text-align: center;
+}
+
+.content-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    position: relative;
+}
+
+.content-item-success {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+    position: relative;
+}
+
+.pin-icon {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 25%;
+    transform: translateY(-50%);
+}
+
+.success-icon {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.delete-content-icon {
+    margin-top: 2px;
+    margin-right: 35px;
+}
+
+.delete-content-icon:hover,
+.pin-icon:hover {
+    cursor: pointer;
+}
+
+.delete-content-icon-success {
+    margin-top: 2px;
+    margin-right: 35px;
+    color: #b8b7b7;
+}
+
+.delete-content-icon-success:hover {
+    cursor: pointer;
+}
+
+.content-item-input {
+    width: calc(100% - 30px);
+    padding: 10px;
+    padding-left: 35px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+    color: #7f7f7f;
+}
+
+.content-item-input-success {
+    text-decoration: line-through;
+    width: calc(100% - 30px);
+    padding: 10px;
+    padding-left: 35px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+    color: #c5c5c5;
+    background-color: #f4f4f4;
+
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 2px;
+}
+
+/*popup*/
+
+/* Existing CSS for .popupnote */
+.popupnote {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.389);
+    z-index: 300;
+}
+
+.overlay-note-popup {
+    border-radius: 5px;
+    margin-top: 60px;
+    background-color: white;
+    z-index: 301;
+    width: calc(100% - 10px);
+    margin-left: 5px;
+    margin-right: 5px;
+    max-height: calc(100% - 70px);
+    overflow-y: auto;
+}
+
+.popupnote-content {
+    padding: 13px;
+}
+
+.popupnote-input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.popupnote-body {
+    margin-top: 10px;
+}
+
+.delete-note-icon {
+    margin-left: auto;
+}
+
+.note-input {
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 29px;
+    margin-bottom: 10px;
+    width: calc(100% - 60px);
+}
+
+.note-item {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 5px 15px;
+    background-color: #f9f9f9;
+    margin-top: 7px;
+    cursor: pointer;
+    color: #6a6a6a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#notePopup {
+    position: absolute;
+    /* background: #000; */
+}
+
+.dim-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 299;
+    /* Đảm bảo overlay nằm dưới popup */
+    display: none;
+}
+
+
+/* Popup loaddata */
+/* Thêm lớp overlay vào CSS */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    /* Đảm bảo overlay nằm trên cùng */
+    display: none;
+    /* Mặc định ẩn */
+}
+
+/* Đảm bảo popup nằm trên overlay */
+.popup {
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    /* Đảm bảo popup nằm trên overlay */
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content button {
+    margin: 10px;
+    padding: 0.3rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#syncYes {
+    background-color: #3085d6;
+    color: #ffff;
+}
+
+#syncYes:hover {
+    background-color: #0d6efd;
+}
+
+#syncNo {
+    background-color: #dc3545;
+    color: #ffff;
+}
+
+#syncNo:hover {
+    background-color: #dc3545;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+@media (min-width: 741px) {
+    .overlay-note-popup {
+        margin-right: 84.4%;
+    }
+
+    .popup-content button {
+        margin: 0 29px;
+        padding: 0.3rem 2rem;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (min-width: 741px) {
+    .overlay-note-popup {
+        margin-right: 84.4%;
+    }
+}

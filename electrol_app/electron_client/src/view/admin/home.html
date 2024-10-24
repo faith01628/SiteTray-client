@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/admin/home.css?v=0.1">
+    <link rel="stylesheet" type="text/css" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/history.css">
+    <title>home</title>
+    <script src="../../js/admin/home.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="body-header">
+            <div class="header">
+                <input type="text" id="searchInput" placeholder="Search..." onchange="handleSearch()">
+
+            </div>
+            <div class="header-right">
+                <button class="logout" onclick='handleLogout(event)'>
+                    Logout
+                </button>
+                <!-- <button class="gacha" onclick='handleGacha(event)'>
+                    Gacha
+                </button> -->
+            </div>
+        </div>
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <!-- <th>Code</th> -->
+                    <th>Email</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody data-id="userId">
+            </tbody>
+        </table>
+    </div>
+    <div id="copyHistoryBox" style="display: none;">
+        <!-- Nội dung của box sẽ được thay đổi bằng JavaScript -->
+    </div>
+</body>
+
+
+</html>

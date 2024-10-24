@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/user/signup.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+    <title>signup</title>
+    <script src="../../../js/user/signup/signup.js" defer></script>
+</head>
+
+<body>
+    <div class="pase-signup">
+        <div class='box-left-signup'>
+            <p class='text-introduce'>
+                Welcome to the lucky draw entry event
+            </p>
+        </div>
+        <div class='box-right-signup'>
+            <div class='status'>
+                <div class='status-item'>
+                    <img src='../../../access/1.png' class='img1' />
+                    <span class='line'>register</span>
+                    <img src='../../../access/arrow.png' class='arrow' />
+                </div>
+                <div class='status-item'>
+                    <img src='../../../access/22.png' class='img2' />
+                    <span class='line'>confirm</span>
+                    <img src='../../../access/arrow.png' class='arrow' />
+                </div>
+                <div class='status-item'>
+                    <img src='../../../access/33.png' class='img3' />
+                    <span class='line'>done</span>
+                </div>
+            </div>
+            <div class='signup-solid'></div>
+            <div class='input-item'>
+                <div class="title-name">
+                    <span>
+                        Name:
+                    </span>
+                </div>
+                <div class='name'>
+                    <input id="username" placeholder='Enter name' />
+                </div>
+                <div class="title-phone">
+                    <span>
+                        Phone:
+                    </span>
+                </div>
+                <div class='phone'>
+                    <input id="phone" placeholder='Enter number phone' />
+                </div>
+                <div class="title-email">
+                    <span>
+                        Email:
+                    </span>
+                </div>
+                <div class='email'>
+                    <input id="email" placeholder='Enter email' />
+                </div>
+                <div class="title-address">
+                    <span>
+                        Address:
+                    </span>
+                </div>
+                <div class='address'>
+                    <input id="address" placeholder='Enter address' />
+                </div>
+                <div>
+                    <input id="code" hidden />
+                </div>
+            </div>
+
+            <div class='button-signup'>
+                <button class='button-login' onclick="handleLogin(event)">Login</button>
+                <button class='button-next' onclick="handleNext(event)">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

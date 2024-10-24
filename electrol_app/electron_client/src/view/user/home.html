@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/user/home.css">
+    <link rel="stylesheet" type="text/css" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/history.css">
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../../js/user/home.js"></script>
+    <title>home</title>
+</head>
+
+<body>
+    <div class="home-pase">
+        <div class="box-left-home">
+            <div class='logo'>
+                <img src='../../access/logo.jpg' />
+            </div>
+            <div class='title'>
+                Information about the lucky wheel mini-game with a chance to win travel tickets.
+            </div>
+            <div class='content'>
+                <div class='name'>
+                    <div class='title-content'>
+                        <span>Name :</span>
+                    </div>
+                    <div class='content-name'>
+                        <span id="username"></span>
+                    </div>
+                </div>
+                <div class='phone'>
+                    <div class='title-content'>
+                        <span>Phone :</span>
+                    </div>
+                    <div class='content-phone'>
+                        <span id="phone"></span>
+                    </div>
+                </div>
+                <div class='email'>
+                    <div class='title-content'>
+                        <span>Email :</span>
+                    </div>
+                    <div class='content-email'>
+                        <span id="email"></span>
+                    </div>
+                </div>
+                <div class='code'>
+                    <div class='title-content'>
+                        <span>Code :</span>
+                    </div>
+                    <div class='content-code'>
+                        <span id="code"></span>
+                    </div>
+                </div>
+                <div class='address'>
+                    <div class='title-content'>
+                        <span>Address :</span>
+                    </div>
+                    <div class='content-address'>
+                        <span id="address"></span>
+                    </div>
+                </div>
+                <div class='text-information'>
+                    <span>
+                        This information is used for lucky draw purposes, thus requiring accurate information for prize
+                        redemption. All details will be recorded according to the participation rules, and you are only
+                        allowed to change the lucky code or phone number once. If any issues arise, please contact the
+                        support team as soon as possible for resolution. Please ensure all your details are correct
+                        before submitting, as errors may lead to disqualification. Winners will be notified via the
+                        provided phone number, so it is crucial to ensure it is accurate and up to date. The organizers
+                        are not responsible for any incorrect information provided by participants. By entering, you
+                        agree to the terms and conditions set forth by the event organizers.
+                    </span>
+                </div>
+            </div>
+            <div class='footer-home'>
+                <div class='action'>
+                    <div class='gacha'>
+                        <button onclick='handleGacha(event)'>Gacha</button>
+                    </div>
+                    <div class='edit'>
+                        <button type="submit" onclick='handleEdit(event)'>Edit</button>
+                    </div>
+                    <div class='logout'>
+                        <button onclick='handleLogout(event)'> Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-right-home">
+            <div class="ticket">
+                <div>
+                    <img src='../../access/bgTicker.jpg' class="bgticket" />
+                </div>
+                <div class="text">
+                    <div class="text-ticket">
+                        <div class="text-title">
+                            <span id="titleticker">
+                                <!-- Ha Long Bay Tourist Trip -->
+                            </span>
+                        </div>
+                        <div class="text-address">
+                            <span id="dayticker">
+                                <!-- June 5 2024 ~ Ha Long Bay -->
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-solid"></div>
+                    <div class="text-body">
+                        <div class='body-left'>
+                            <div class="name">
+                                <div class='title-name'>
+                                    <span>
+                                        Name :
+                                    </span>
+                                </div>
+                                <div class='name-name'>
+                                    <span id="ticket-username"></span>
+                                </div>
+                            </div>
+                            <div class="date">
+                                <div class='title-date'>
+                                    <span id="title1">
+                                        <!-- Date : -->
+                                    </span>
+                                </div>
+                                <div class='date-date'>
+                                    <span id="content1">
+                                        <!-- June 5 2024 -->
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="seats">
+                                <div class='title-seats'>
+                                    <span id="title3">
+                                        <!-- Seats : -->
+                                    </span>
+                                </div>
+                                <div class='seats-seats'>
+                                    <span id="content3">
+                                        <!-- B2 -->
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='body-right'>
+                            <div class="code">
+                                <div class='title-code'>
+                                    <span>
+                                        Code :
+                                    </span>
+                                </div>
+                                <div class='code-code'>
+                                    <span id="ticket-code"></span>
+                                </div>
+                            </div>
+                            <div class="time">
+                                <div class='title-time'>
+                                    <span id="title2">
+                                        <!-- Time : -->
+                                    </span>
+                                </div>
+                                <div class='time-time'>
+                                    <span id="content2">
+                                        <!-- 9:00 AM -->
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="car-number">
+                                <div class='title-car-number'>
+                                    <span id="title4">
+                                        <!-- Car number : -->
+                                    </span>
+                                </div>
+                                <div class='car-car-number'>
+                                    <span id="content4">
+                                        <!-- 29LD-3764 -->
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-solid-bottom"></div>
+                    <div class="text-code">
+                        <span>
+                            <svg id="barcode" class="custom-barcode"></svg>
+                        </span>
+                    </div>
+                    <div class='text-bottom'>
+                        <span>
+                            Scan your barcode at the entry gate.
+                        </span>
+                    </div>
+                    <div class="text-solid-footer"></div>
+                </div>
+                <div class='left'></div>
+                <div class='right'></div>
+            </div>
+        </div>
+    </div>
+    <div id="copyHistoryBox" style="display: none;">
+        <!-- Nội dung của box sẽ được thay đổi bằng JavaScript -->
+    </div>
+</body>
+
+</html>

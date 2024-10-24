@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.gacha-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+.winner-title {
+    font-size: 2em;
+}
+
+.gacha-item {
+    width: 100px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcc00;
+    border-radius: 10px;
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.winner-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.winner-info {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    color: #333;
+}
+
+.button-gacha {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.button-gacha button {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #ff7f50, #ff4500);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.button-gacha button:hover {
+    background: linear-gradient(135deg, #ff6347, #ff0000);
+    transform: scale(1.05);
+}
+
+.button-gacha button:active {
+    transform: scale(0.95);
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 741px) {
+    .winner-info {
+        width: 420px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .winner-display {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 740px) {
+    .winner-info {
+        font-size: 0.8em;
+        width: 340px;
+    }
+
+    .gacha-container {
+        flex-wrap: nowrap;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .winner-title {
+        font-size: 1.5em;
+    }
+
+    .gacha-item {
+        width: 45px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .winner-display {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .button-gacha {
+        margin-top: 10px;
+    }
+
+    .back-button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}

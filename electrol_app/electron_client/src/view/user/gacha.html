@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/admin/gacha.css">
+    <link rel="stylesheet" type="text/css" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/history.css">
+    <title>Gacha Interface</title>
+</head>
+
+<body>
+    <div class="container">
+        <button class="back-button" onclick="window.location.href='home.html'">Back to Home</button>
+
+        <div class="gacha-container">
+            <div class="gacha-item">?</div>
+            <div class="gacha-item">?</div>
+            <div class="gacha-item">?</div>
+            <div class="gacha-item">?</div>
+            <div class="gacha-item">?</div>
+            <div class="gacha-item">?</div>
+            <div class="gacha-item">?</div>
+            <div class="gacha-item">?</div>
+        </div>
+
+        <div class="winner-display">
+            <span class="winner-title">
+                Prize Winner:
+            </span>
+            <span id="winner"></span>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="../../js/user/gacha.js"></script>
+</body>
+
+</html>

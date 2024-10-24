@@ -1,0 +1,69 @@
+#copyHistoryBox {
+    position: fixed;
+    top: 50%;
+    /* Thay đổi khoảng cách so với phía trên của trang tùy ý */
+    left: 50%;
+    /* Hiển thị box ở giữa trang */
+    transform: translateX(-50%);
+    width: 250px;
+    max-height: 300px;
+    /* Giới hạn chiều cao của box */
+    overflow-y: auto;
+    /* Tạo thanh cuộn khi nội dung quá dài */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 999;
+    /* Đảm bảo box hiển thị trên cùng */
+}
+
+#copyHistoryBox p {
+    margin-left: 7px;
+    list-style-type: none;
+    padding: 0;
+    font-size: 0.8rem;
+}
+
+/* Hiển thị box */
+#copyHistoryBox.show {
+    display: block;
+}
+
+/* Ẩn box */
+#copyHistoryBox.hide {
+    display: none;
+}
+
+.delete-icon-history {
+    /* text-align: left; */
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.list-item-history {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* File: global.css hoặc home.css */
+.pinned {
+    background-color: rgb(228, 228, 228);
+    /* Thay đổi màu sắc theo nhu cầu của bạn */
+}
+
+.deletebtn {
+    padding: 4px 91.4px;
+    border: none;
+}
+
+.pin-icon {
+    cursor: pointer;
+    margin-top: 10px;
+    /* margin-right: 10px;
+    margin-left: 10px; */
+}

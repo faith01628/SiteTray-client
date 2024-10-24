@@ -1,0 +1,318 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left-section {
+    border-top: 3px solid #3e60d5;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.right-section {
+    width: 70%;
+    position: relative;
+    background: url('https://izm.transtechvietnam.com/access/bg-auth.jpg') no-repeat center center/cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+}
+
+.background-rigth-section {
+    background-color: rgba(0, 0, 0, 0.341);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+.form-login {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-login {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.description {
+    margin-bottom: 30px;
+    margin-top: -10px;
+    color: #90979d;
+    font-size: 0.85rem;
+}
+
+.input-item-login .title-email,
+.input-item-login .title-credential {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 8px;
+    width: calc(100%);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #6c757d;
+}
+
+input[type="checkbox"] {
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 0.25em;
+    border: var(--ct-border-width) solid var(--ct-border-color-translucent);
+    background: var(--ct-bg-color);
+    color: var(--ct-color);
+    cursor: pointer;
+}
+
+.password-confirm,
+.password {
+    position: relative;
+}
+
+.password-confirm-icon,
+.password-icon {
+    position: absolute;
+    display: block;
+    top: 3px;
+    right: 15px;
+    transform: translateY(50%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.remember-me {
+    display: flex;
+    justify-items: start;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.remember-me input {
+    margin-right: 10px;
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 600;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+.form-check-label a {
+    color: #949ba1;
+    text-decoration: none;
+    font-weight: 500 !important;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 8px;
+    background-color: #3e60d5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+.social-login {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-login p {
+    margin-bottom: 15px;
+    margin-top: 35px;
+    color: #90979d;
+}
+
+.social-icons a {
+    margin: 0 5px;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+}
+
+.signup-link {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 50px;
+    color: #90979d;
+}
+
+.signup-link a {
+    color: #90979d;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-password {
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: #90979d;
+    margin-left: 5px;
+}
+
+.right-section .background-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.right-section .overlay-text {
+    min-width: 80%;
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+}
+
+.right-section .overlay-text h2 {
+    font-size: 1.82rem;
+    margin-bottom: 20px;
+    min-width: 80%;
+}
+
+.right-section .overlay-text p {
+    font-size: 1.1rem;
+    width: 80%;
+    margin: 0 auto 15px;
+}
+
+/* Media Query to hide the right section on screens smaller than 714px */
+@media (max-width: 714px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section {
+        width: 100%;
+    }
+
+    .right-section {
+        display: none;
+    }
+
+    .input-item-login .title-email,
+    .input-item-login .title-credential {
+        margin-bottom: 7px
+    }
+
+    .social-login {
+        margin-top: 10px;
+    }
+
+    .social-login p {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .signup-link {
+        margin-top: 35px;
+    }
+}
+
+@media (min-width: 714px) {
+    .form-login {
+        margin-top: 30px;
+    }
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.social-list-item {
+    height: 1.9rem;
+    width: 1.9rem;
+    line-height: calc(2.2rem - 4px);
+    display: block;
+    border: 2px solid;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.social-list-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.border-primary {
+    border-color: #3e60d5;
+    color: #3e60d5;
+}
+
+.border-danger {
+    border-color: #f1617e;
+    color: #f1617e;
+}
+
+.border-info {
+    border-color: #16a7e9;
+    color: #16a7e9;
+}
+
+.border-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.social-list-item a:hover {
+    color: #fff;
+}

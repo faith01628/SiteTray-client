@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/user/confirm.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+    <title>confirm</title>
+    <script src="../../../js/user/signup/confirm.js"></script>
+</head>
+
+<body>
+    <div class="pase-signup">
+        <div class='box-left-confirm'>
+            <p class='text-introduce'>
+                Welcome to the lucky draw entry event
+            </p>
+        </div>
+        <div class='box-right-confirm'>
+            <div class='status'>
+                <div class='status-item'>
+                    <img src='../../../access/11.png' class='img1' />
+                    <span class='line'>register</span>
+                    <img src='../../../access/arrow.png' class='arrow' />
+                </div>
+                <div class='status-item'>
+                    <img src='../../../access/11.png' class='img2' />
+                    <span class='line'>confirm</span>
+                    <img src='../../../access/arrow.png' class='arrow' />
+                </div>
+                <div class='status-item'>
+                    <img src='../../../access/3.png' class='img3' />
+                    <span class='line'>done</span>
+                </div>
+            </div>
+            <div class='signup-solid'></div>
+            <div class='input-item'>
+                <span class='text-item'>
+                    Successfully registered
+                </span>
+                <span class='text-item-ty'>
+                    Thank you for registering. Your lucky number is:
+                </span>
+                <span class='code-item' id="userCode"></span>
+            </div>
+
+            <div class='button-signup'>
+                <button class='button-back' onclick="handleBack(event)">Back</button>
+                <button class='button-confirm' onclick="Handleconfirm(event)">Finish</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

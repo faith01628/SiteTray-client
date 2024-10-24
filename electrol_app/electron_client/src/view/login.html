@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="../js/login.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div class="form-login">
+                <div class="text-login">Sign In</div>
+                <p class="description">Enter your email address and password to access account.</p>
+                <form id="login-form">
+                    <div class='input-item-login'>
+                        <div class="item">
+                            <div class="title-email">
+                                <span>Email address</span>
+                            </div>
+                            <div class='email'>
+                                <input id="email" type="text" placeholder='Enter your email' />
+                            </div>
+                            <div class="title-credential">
+                                <span>Password</span>
+                                <a href="#" class="forgot-password">Forgot your password?</a>
+                            </div>
+                            <div class='password' id="password-login">
+                                <i class="fa-solid fa-eye password-icon" id="password-icon" style="color: #7b727be5;"
+                                    onclick="handleShowPassword(event)"></i>
+                                <input type="password" class="password" id="password"
+                                    placeholder='Enter your password' />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember-me" />
+                        <label class="form-check-label" for="checkbox-signin">Remember me</label>
+                    </div>
+                    <div class='button-signup'>
+                        <button class='btn-login' type='submit'>Login</button>
+                    </div>
+                </form>
+                <div class="social-login">
+                    <p>Sign in with</p>
+                    <ul class="social-list list-inline mt-3">
+                        <li class="list-inline-item">
+                            <a class="social-list-item border-primary text-primary"><i
+                                    class="ri-facebook-circle-fill"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="social-list-item border-danger text-danger"><i class="ri-google-fill"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="social-list-item border-info text-info"><i class="ri-twitter-fill"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="social-list-item border-secondary text-secondary"><i
+                                    class="ri-github-fill"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="signup-link">
+                    <p>Don't have an account? <a href="../view/user/signup.html">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="background-rigth-section">
+                <div class="background-image"></div>
+                <div class="overlay-text">
+                    <h2 class="mb-3">I love the color!</h2>
+                    <p class="lead"><i class="ri-double-quotes-l"></i> Everything you need is in this
+                        template. Love the overall look and feel. Not too flashy, and still very
+                        professional and smart.</p>
+                    <p>
+                        - ZeWork - All in One -
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyHistoryBox" style="display: none;">
+        <!-- Nội dung của box sẽ được thay đổi bằng JavaScript -->
+    </div>
+</body>
+
+</html>

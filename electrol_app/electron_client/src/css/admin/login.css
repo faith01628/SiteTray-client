@@ -1,0 +1,145 @@
+.login {
+    background: #2f2f30;
+    text-align: center;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.form-login {
+    background-color: #F2F2F2;
+    margin: 100px auto;
+    width: 35%;
+    min-height: 65vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
+
+.text-login {
+    color: #535353;
+    font-size: 45px;
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.input-item-login {
+    margin: 50px 15px 0 15px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.input-item-login .item {
+    margin-top: 20px;
+}
+
+.input-item-login .title-username,
+.input-item-login .title-password {
+    text-align: left;
+    font-weight: bold;
+    margin-left: 8px;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.input-item-login input {
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.button-login {
+    margin: 18% 0;
+}
+
+.button-login .btn-login {
+    background-color: #45a8cc;
+    color: #ffffff;
+    border: 2px solid #45a8cc;
+    padding: 14px 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-login .btn-login:hover {
+    background-color: #35819c;
+}
+
+
+#copyHistoryBox {
+    position: fixed;
+    top: 50px;
+    /* Thay đổi khoảng cách so với phía trên của trang tùy ý */
+    left: 50%;
+    /* Hiển thị box ở giữa trang */
+    transform: translateX(-50%);
+    width: 300px;
+    max-height: 300px;
+    /* Giới hạn chiều cao của box */
+    overflow-y: auto;
+    /* Tạo thanh cuộn khi nội dung quá dài */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 999;
+    /* Đảm bảo box hiển thị trên cùng */
+}
+
+#copyHistoryBox ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#copyHistoryBox ul li {
+    margin-bottom: 5px;
+}
+
+#copyHistoryBox ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Hiển thị box */
+#copyHistoryBox.show {
+    display: block;
+}
+
+/* Ẩn box */
+#copyHistoryBox.hide {
+    display: none;
+}
+
+@media (max-width: 740px) {
+    .form-login {
+        width: 90%;
+        min-height: 70vh;
+    }
+
+    .text-login {
+        font-size: 35px;
+        top: 50px;
+    }
+
+    .input-item-login {
+        padding: 20px;
+        width: 83%;
+    }
+
+    .input-item-login .item {
+        margin-top: 20px;
+    }
+
+    .button-login {
+        margin: 19% 0;
+    }
+
+    .button-login .btn-login {
+        padding: 14px 50px;
+    }
+}
